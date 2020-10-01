@@ -1,0 +1,17 @@
+version: "3.8"
+services:
+  postgres:
+    image: postgres
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_PASSWORD=tp_devops
+      - POSTGRES_USER=tp_devops
+  serveur-kotlin:
+    image: img
+    ports: 
+      - 8080:8080
+    environment:
+      - url=postgres/tp_devops
+      - username=tp_devops
+      - password=tp_devops
