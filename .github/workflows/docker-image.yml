@@ -15,7 +15,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build the Docker image
-      run: docker build . --file .docker/Dockerfile --tag debatent/tp-devops
+      run: docker build . --file docker/Dockerfile --tag debatent/tp-devops
     - name: Docker Login
       uses: docker/login-action@v1.4.1
       with:
